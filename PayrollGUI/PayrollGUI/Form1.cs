@@ -19,6 +19,27 @@ namespace PayrollGUI
 
         private void btnGiveResults_Click(object sender, EventArgs e)
         {
+            string name;
+            string socialSecurityNumber;
+            double payRate;
+            double hoursWorked;
+            
+            name = txtName.Text;
+            socialSecurityNumber = txtSSN.Text;
+            payRate = Convert.ToDouble(txtHoursPay.Text);
+            hoursWorked = Convert.ToDouble(txtHoursWorked.Text);
+
+            double grossPay;
+            double fedWithholding;
+            double stateWithholding;
+            double netPay;
+            grossPay = hoursWorked * payRate;
+            fedWithholding = grossPay * .15;
+            stateWithholding = grossPay * .05;
+            netPay = (grossPay - stateWithholding) - fedWithholding;
+            lblResults.Text = "Name : " + name + "\nSSN : " + socialSecurityNumber + 
+                "\nGross Pay : " + grossPay + "\nFederal withholding tax : " + fedWithholding + 
+               "\nState Withholding tax : " + stateWithholding +  "\nNet pay: " + netPay;
 
         }
     }

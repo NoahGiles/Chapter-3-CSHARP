@@ -108,7 +108,7 @@
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
-            this.lblTitle.Location = new System.Drawing.Point(75, 94);
+            this.lblTitle.Location = new System.Drawing.Point(99, 92);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(187, 13);
             this.lblTitle.TabIndex = 9;
@@ -149,7 +149,7 @@
             this.Controls.Add(this.txtSSN);
             this.Controls.Add(this.txtName);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = " ";
             this.ResumeLayout(false);
             this.PerformLayout();
 
